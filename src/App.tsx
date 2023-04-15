@@ -1,11 +1,12 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Table from './components/Table';
+import Navbar from "./components/Navbar";
+import Table from "./components/Table";
+import Posts from "./components/Posts";
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Table/>
+      <Navbar />
+      <Table />
+      <Posts />
     </div>
   );
 };
