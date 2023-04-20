@@ -1,7 +1,7 @@
 import postImage from "../assets/post.jpg";
-import { useState, useEffect } from "react";
-import { IBlog } from "../types/blog.type";
-const Posts = () => {
+import { useState, useEffect, FC } from "react";
+import { IBlog, IPropsBlog } from '../types/blog.type';
+const Posts:FC<IPropsBlog> = () => {
   const [blog, setBlog] = useState<IBlog[]>([]);
   useEffect(() => {
     setBlog([
@@ -55,7 +55,7 @@ const Posts = () => {
           <h1 className="font-bold text-blue-900">{data.title}</h1>
           <p>{data.text}</p>
         </div>
-      ))}
+      ))} 
     </div>
   );
 };

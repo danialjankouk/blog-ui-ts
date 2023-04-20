@@ -71,6 +71,11 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
+          {/* buttons */}
+          <div className="flex flex-col md:flex-row gap-x-2">
+            <button className="bg-purple-400 text-white px-3 py-2 rounded-md">Login</button>
+            <button className="bg-purple-600 text-white px-3 py-2 rounded-md">Signup</button>
+          </div>
         </div>
       </nav>
     </div>
