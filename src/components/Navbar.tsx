@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-
-const Navbar = () => {
+import React, { FC, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+const Navbar: FC = () => {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
@@ -73,8 +73,16 @@ const Navbar = () => {
           </div>
           {/* buttons */}
           <div className="flex flex-col md:flex-row gap-x-2">
-            <button className="bg-purple-400 text-white px-3 py-2 rounded-md">Login</button>
-            <button className="bg-purple-600 text-white px-3 py-2 rounded-md">Signup</button>
+            <Link to="/login">
+              <button className="bg-purple-400 text-white px-3 py-2 rounded-md">
+                Login
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button className="bg-purple-600 text-white px-3 py-2 rounded-md">
+                Signup
+              </button>
+            </Link>
           </div>
         </div>
       </nav>

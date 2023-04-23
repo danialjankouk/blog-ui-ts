@@ -1,7 +1,7 @@
 import postImage from "../assets/post.jpg";
 import { useState, useEffect, FC } from "react";
 import { IBlog, IPropsBlog } from '../types/blog.type';
-const Posts:FC<IPropsBlog> = () => {
+const Posts:FC = () => {
   const [blog, setBlog] = useState<IBlog[]>([]);
   useEffect(() => {
     setBlog([
