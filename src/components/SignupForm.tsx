@@ -5,17 +5,22 @@ interface Props {
 export const SignupForm = ({ onSubmit }: Props) => {
   const [firstname, setfirstname] = useState("");
   const [lastname, setlastname] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   function handleSubmit(event: { preventDefault: () => void }) {
     event.preventDefault();
     onSubmit(firstname, password);
     setfirstname("");
+    setEmail("");
     setlastname("");
     setPassword("");
   }
 
   function handleChangefirstname(event: { target: { value: string } }) {
     setfirstname(event.target.value.toLowerCase());
+  }
+  function handleChangeEmail(event: { target: { value: string } }) {
+    setEmail(event.target.value.toLowerCase());
   }
 
   function handleChangelastname(event: { target: { value: string } }) {
@@ -49,6 +54,15 @@ export const SignupForm = ({ onSubmit }: Props) => {
             type="text"
             onChange={handleChangelastname}
             value={lastname}
+          />
+        </div>
+        <div>
+          <label htmlFor="email-input">Email:</label>
+          <input
+            id="email-input"
+            type="text"
+            onChange={handleChangeEmail}
+            value={email}
           />
         </div>
         <div>
